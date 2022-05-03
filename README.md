@@ -39,5 +39,4 @@ https://youtu.be/ezwFY-arwFM
 
 PROJECT DEVELOPER
 *****************
-Julian Tweneboa Kodua
-Yale College '25
+Julian Tweneboa Kodua, Yale College '25
