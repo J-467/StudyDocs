@@ -39,4 +39,5 @@ https://youtu.be/ezwFY-arwFM
 
 PROJECT DEVELOPER
 *****************
-Julian Tweneboa Kodua, Yale College '25 (*for CS50, 2021*)
+Julian Tweneboa Kodua
+Yale College '25
