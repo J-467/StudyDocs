@@ -1,0 +1,42 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .purple
+{
+    color: purple;
+}
+nav .navbar-brand .black
+{
+    color: black;
+}
+
+.parent {
+    width: 100%;
+    height: 90px;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.child {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    background-color: purple;
+}
+
+.heading{
+    font-weight: bold;
+}
+
+#topic{
+    font-weight: bold;
+}
+
+#middle{
+    text-align: center;
+}
+

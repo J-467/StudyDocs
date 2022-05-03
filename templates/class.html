@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Class
+{% endblock %}
+
+{% block main %}
+
+<h1 id = "topic" class = "parent" ><b><u>{{course.course_name}}</b></u></h1>
+
+<h2><b>Professor: </b></h2>
+<h4 class = "parent">{{course.prof}}</h4>
+
+<h2 class = "heading">Syllabus</h2>
+
+<div class = "parent">
+<a href = "{{course.syllabus}}" target = "_blank" style = "font-size: 20pt;">{{course.course_name}}</a>
+</div>
+
+<h2 class = "parent"><span class = "heading"><u>Key Concepts</u></span></h2>
+
+{% for class in classe %}
+
+<a href = "{{class.source}}" style = "font-family: Georgia, Times New Roman; font-size: 30px;"><h2>{{class.s_name}}</h2></a>
+
+<div>
+<iframe  width="400" height="300"
+src="{{class.source}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen target = "_blank">
+</iframe>
+<h4 style = "font-family: Georgia, Times New Roman; font-size: 24px;">{{class.s_description}}</h4>
+
+<br>
+
+</div>
+
+
+{% endfor %}
+
+<div class = "parent"></div>
+
+<h6>Want to leave a recommendation for a concept in this class?</h6>
+
+<form action = "/class" method = 'POST'>
+    <input name = 'course_id' type = 'hidden' value = {{course.id}}>
+    <button class="btn btn-primary" type = "submit">Click here to submit a recommendation for this class</button>
+</form>
+
+
+
+{% endblock%}

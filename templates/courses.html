@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Courses
+{% endblock %}
+
+{% block main %}
+
+
+
+<h3><b>Kindly select a <span style = "color: purple">Course</span> to proceed</b></h3>
+<br>
+
+<ul class="list-group"></ul>
+
+{% for course in courses %}
+<form action = "/courses" method = "POST">
+    <li class="list-group-item" style = "font-family: Georgia, Times New Roman; font-size: 30px;">
+        <input name = 'id' type = 'hidden' value = {{course.id}}>
+        <button type = submit>{{course.course_name}}</button>
+    </li>
+</form>
+{% endfor %}
+</ul>
+
+{% endblock %}

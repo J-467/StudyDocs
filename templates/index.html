@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+<h3><b>Welcome to <span style = "color: purple">Study Docs</span>: Kindly select a <span style = "color: purple">major</span> to proceed</b></h3>
+<br>
+<ul class="list-group">
+{% for major in majors %}
+
+<form action = "/" method = "POST">
+    <li class="list-group-item" style = "font-family: Georgia, Times New Roman; font-size: 30px;">
+        <input name = 'id' type = 'hidden' value = {{major.id}}>
+        <button type = submit>{{major.major}}</button>
+    </li>
+</form>
+
+{% endfor %}
+</ul>
+
+{% endblock%}
