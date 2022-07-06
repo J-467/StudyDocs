@@ -13,7 +13,7 @@ This app refers students to most trusted resources needed to understand concepts
 
 ## IMPLEMENTATION
 **************
-Ideally, data for this web app would be obtained from yale's database using a scraper probably. However, due to time constraints, data in this model of the web app has been hardcoded into the database. SQl queries used to create and insert data into the database is available in dbcodes.sql in the studydocs folder
+Ideally, data for this web app would be obtained from yale's database using a scraper probably. However, due to time constraints, data in this model of the web app has been hardcoded into the database. SQL queries used to create and insert data into the database is available in dbcodes.sql in the studydocs folder
 
 Running this project
 *********************
