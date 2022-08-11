@@ -1,24 +1,28 @@
-{% extends "layout.html" %}
-
-{% block title %}
-    Index
-{% endblock %}
-
-{% block main %}
-
-<h3><b>Welcome to <span style = "color: purple">Study Docs</span>: Kindly select a <span style = "color: purple">major</span> to proceed</b></h3>
-<br>
-<ul class="list-group">
-{% for major in majors %}
-
-<form action = "/" method = "POST">
-    <li class="list-group-item" style = "font-family: Georgia, Times New Roman; font-size: 30px;">
-        <input name = 'id' type = 'hidden' value = {{major.id}}>
-        <button type = submit>{{major.major}}</button>
-    </li>
-</form>
-
-{% endfor %}
-</ul>
+{% extends "layout.html" %} {% block title %} Index {% endblock %} {% block main %}
+<div class="container-fluid py-5 text-center">
+    <h3><b>Welcome to <span style = "color: purple">Study Docs</span>: Kindly select a <span style = "color: purple">major</span> to proceed</b></h3>
+    <br>
+    <ul class="list-group">
+        <div class="row">
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                {% for major in majors %}
+                <form action="/" method="POST">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <img src="static/images/yale.jpg" class="card-img-top" alt={{major.major}}>
+                            <div class="card-body">
+                                <h3 class="card-title">{{major.major}}</h3>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <input name='id' type='hidden' value={ {major.id}}>
+                                <button type=submit class="btn btn-primary">Classes</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            {% endfor %}
+        </div>
+    </div>
+        
+</div>
 
 {% endblock%}

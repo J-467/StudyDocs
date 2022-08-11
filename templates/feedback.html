@@ -1,16 +1,11 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} {% block title %} Feedback {% endblock %} {% block main %}
+<div class="container-fluid py-5 text-center">
 
-{% block title %}
-    Feedback
-{% endblock %}
-
-{% block main %}
-
-<h2 class = "parent">We'd love to hear your thoughts on Study docs</h2>
-<form action = "/feedback" method = "post">
-    <textarea name = "feedback" placeholder="Leave a feedback..." class="form-control" rows="3"></textarea>
-    <br><br>
-    <button type = "submit" class="btn btn-primary">Submit feedback</button>
-</form>
-
+    <h2 class="parent">We'd love to hear your thoughts on Study docs</h2>
+    <form action="/feedback" method="post">
+        <textarea name="feedback" placeholder="Leave a feedback..." class="form-control" rows="3"></textarea>
+        <br><br>
+        <button type="submit" class="btn btn-primary">Submit feedback</button>
+    </form>
+</div>
 {% endblock%}

@@ -1,14 +1,7 @@
-{% extends "layout.html" %}
-
-{% block title %}
-    Log In
-{% endblock %}
-
-{% block main %}
+{% extends "layout.html" %} {% block title %} Log In {% endblock %} {% block main %}
 <div class="limiter">
     <div class="container-login100">
-        <div class="login100-more" style= "background-image: url({{ url_for('static',filename='images/books.jpg') }});"></div>
-
+        <div class="login100-more" style="background-image: url({{url_for('static',filename='images/books.jpg') }});"></div>
         <div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
             <form class="login100-form validate-form" action="/login" method="post">
                 <span class="login100-form-title p-b-59">
@@ -21,7 +14,7 @@
                     <span class="focus-input100"></span>
                 </div>
 
-                <div class="wrap-input100 validate-input" data-validate = "Password is required">
+                <div class="wrap-input100 validate-input" data-validate="Password is required">
                     <span class="label-input100">Password</span>
                     <input class="input100" type="password" name="password" placeholder="*************">
                     <span class="focus-input100"></span>
@@ -30,7 +23,7 @@
                 <div class="container-login100-form-btn">
                     <div class="wrap-login100-form-btn">
                         <div class="login100-form-bgbtn"></div>
-                        <button href = "/login" class="login100-form-btn">
+                        <button href="/login" class="login100-form-btn">
                             Sign In
                         </button>
                     </div>
@@ -39,4 +32,5 @@
         </div>
     </div>
 </div>
+
 {% endblock %}
